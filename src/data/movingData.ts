@@ -1,10 +1,11 @@
-import heroMovingTruckImg from '../assets/images/hero_moving_truck_1791288916992.jpg';
-import tataAceFleetImg from '../assets/images/tata_ace_fleet_1791288941955.jpg';
+import heroMovingTruckImg from '../assets/images/hero_moving_truck_branded_1791309647543.jpg';
+import tataAceFleetImg from '../assets/images/tata_ace_fleet_branded_1791309661829.jpg';
 import packingCrewWorkImg from '../assets/images/packing_crew_work_1791288957873.jpg';
 import officeRelocationImg from '../assets/images/office_relocation_1791288969196.jpg';
-import hyderabadDeliveryImg from '../assets/images/hyderabad_delivery_1791288988508.jpg';
+import hyderabadDeliveryImg from '../assets/images/ashok_leyland_branded_1791309671646.jpg';
+import eicherOpenTruckImg from '../assets/images/eicher_open_truck_branded_1791310802721.jpg';
 
-export { heroMovingTruckImg, tataAceFleetImg, packingCrewWorkImg, officeRelocationImg, hyderabadDeliveryImg };
+export { heroMovingTruckImg, tataAceFleetImg, packingCrewWorkImg, officeRelocationImg, hyderabadDeliveryImg, eicherOpenTruckImg };
 
 export interface VehicleInfo {
   id: string;
@@ -53,19 +54,19 @@ export const VEHICLE_FLEET: VehicleInfo[] = [
   },
   {
     id: 'eicher-truck',
-    name: 'Eicher 14ft / 17ft Closed Container',
-    nickname: 'The Heavy Lifter & Corporate Carrier',
+    name: 'Eicher 14ft / 17ft Open Body Truck',
+    nickname: 'The Heavy Lifter (Open Body)',
     capacity: '3,500 - 6,000 kg',
-    dimensions: '14 - 19 ft Closed Weatherproof Box',
-    bestFor: '3 BHK, Duplex villas, Corporate IT office relocations, Industrial equipment',
-    image: tataAceFleetImg,
+    dimensions: '14 - 19 ft Open Heavy Duty Cargo Bed',
+    bestFor: '3 BHK, Duplex villas, Corporate IT office relocations, Heavy furniture & appliances',
+    image: eicherOpenTruckImg,
     features: [
-      '100% Weather-sealed closed container protects against rain & dust',
-      'Holds complete 3 BHK / 4 BHK villa contents in a single trip',
-      'Dedicated transport for fragile IT server racks and corporate setups',
-      'Local Hyderabad & inter-district routes covered'
+      'Open-body truck with reinforced side railings for convenient loading & unloading',
+      'Heavy-duty waterproof tarpaulin & tiedowns protecting against rain & dust',
+      'Holds complete 3 BHK / 4 BHK villa contents with zero hassle',
+      'Available as required across Hyderabad & Telangana routes'
     ],
-    basePriceNotice: 'Maximum safety for large homes & office setups'
+    basePriceNotice: 'Spacious open-body capacity for large family & office moves'
   }
 ];
 
