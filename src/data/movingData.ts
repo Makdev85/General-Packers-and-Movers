@@ -1,11 +1,15 @@
-import heroMovingTruckImg from '../assets/images/hero_moving_truck_branded_1791309647543.jpg';
-import tataAceFleetImg from '../assets/images/tata_ace_fleet_branded_1791309661829.jpg';
+import tataAceImg from '../assets/images/tata_ace.jpg';
+import ashokLeylandImg from '../assets/images/ashok_leyland.jpg';
+import eicherTruckImg from '../assets/images/eicher_truck.jpg';
 import packingCrewWorkImg from '../assets/images/packing_crew_work_1791288957873.jpg';
 import officeRelocationImg from '../assets/images/office_relocation_1791288969196.jpg';
-import hyderabadDeliveryImg from '../assets/images/ashok_leyland_branded_1791309671646.jpg';
-import eicherOpenTruckImg from '../assets/images/eicher_open_truck_branded_1791310802721.jpg';
 
-export { heroMovingTruckImg, tataAceFleetImg, packingCrewWorkImg, officeRelocationImg, hyderabadDeliveryImg, eicherOpenTruckImg };
+export const heroMovingTruckImg = tataAceImg;
+export const tataAceFleetImg = tataAceImg;
+export const hyderabadDeliveryImg = ashokLeylandImg;
+export const eicherOpenTruckImg = eicherTruckImg;
+
+export { packingCrewWorkImg, officeRelocationImg };
 
 export interface VehicleInfo {
   id: string;
@@ -27,7 +31,7 @@ export const VEHICLE_FLEET: VehicleInfo[] = [
     capacity: '750 - 1000 kg',
     dimensions: '7.2 ft x 4.9 ft x 5.5 ft',
     bestFor: '1 RK / 1 BHK Shifting, Single Room, Studio, Bachelor moves, Narrow Hyderabadi bylanes',
-    image: heroMovingTruckImg,
+    image: tataAceImg,
     features: [
       'Fits easily into tight residential colonies across Hyderabad',
       'Waterproof heavy-duty protective tarpaulin cover',
@@ -43,9 +47,9 @@ export const VEHICLE_FLEET: VehicleInfo[] = [
     capacity: '1,250 - 1,850 kg',
     dimensions: '9.8 ft x 5.9 ft x 6 ft',
     bestFor: '1.5 BHK & 2 BHK household shifting, furniture sets, and small office loads',
-    image: hyderabadDeliveryImg,
+    image: ashokLeylandImg,
     features: [
-      'Sturdy cargo deck with heavy tie-downs and cushioning',
+      'Sturdy open cargo deck with heavy tie-downs and cushioning',
       'Smooth suspension protecting fragile electronics and glass',
       'Spacious cargo volume suitable for full living room sets',
       'Available as required on demand'
@@ -59,7 +63,7 @@ export const VEHICLE_FLEET: VehicleInfo[] = [
     capacity: '3,500 - 6,000 kg',
     dimensions: '14 - 19 ft Open Heavy Duty Cargo Bed',
     bestFor: '3 BHK, Duplex villas, Corporate IT office relocations, Heavy furniture & appliances',
-    image: eicherOpenTruckImg,
+    image: eicherTruckImg,
     features: [
       'Open-body truck with reinforced side railings for convenient loading & unloading',
       'Heavy-duty waterproof tarpaulin & tiedowns protecting against rain & dust',
