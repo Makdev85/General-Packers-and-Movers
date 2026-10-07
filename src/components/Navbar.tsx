@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Phone, MessageCircle, Truck, Menu, X, Clock, MapPin, ShieldCheck } from 'lucide-react';
+import brandLogoImg from '../assets/images/brand_logo.jpg';
 
 export const Navbar: React.FC = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -45,10 +46,10 @@ export const Navbar: React.FC = () => {
       <nav className="sticky top-0 z-50 bg-white/95 backdrop-blur-md border-b border-slate-200 shadow-sm">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between h-20">
-            {/* Logo */}
-            <a href="#" className="flex items-center gap-3 group">
-              <div className="w-12 h-12 rounded-xl bg-[#17324d] flex items-center justify-center text-white shadow-md group-hover:bg-orange-600 transition-colors">
-                <Truck className="w-7 h-7 text-orange-400 group-hover:text-white transition-colors" />
+            {/* Prominent Logo On Top */}
+            <a href="#" className="flex items-center gap-3.5 group">
+              <div className="w-13 h-13 sm:w-14 sm:h-14 rounded-2xl overflow-hidden bg-white border-2 border-slate-200 shadow-md group-hover:scale-105 group-hover:border-orange-500 transition-all flex items-center justify-center p-1 shrink-0">
+                <img src={brandLogoImg} alt="General Packers & Movers Official Logo" className="w-full h-full object-contain" />
               </div>
               <div className="leading-tight">
                 <div className="text-xl sm:text-2xl font-black text-[#17324d] tracking-tight font-heading">
@@ -63,7 +64,7 @@ export const Navbar: React.FC = () => {
             </a>
 
             {/* Desktop Navigation Links */}
-            <div className="hidden lg:flex items-center gap-7">
+            <div className="hidden lg:flex items-center gap-6">
               <a href="#services" className="text-sm font-bold text-slate-700 hover:text-orange-600 transition-colors">
                 Services
               </a>
@@ -85,41 +86,42 @@ export const Navbar: React.FC = () => {
               </a>
             </div>
 
-            {/* Call / WhatsApp CTAs */}
+            {/* Right Quick Actions (Phone & WhatsApp) */}
             <div className="hidden sm:flex items-center gap-3">
               <a
                 href="tel:+919652030215"
-                className="inline-flex items-center gap-2 px-4 py-2.5 rounded-xl border-2 border-[#17324d] text-[#17324d] font-bold text-sm hover:bg-[#17324d] hover:text-white transition-all shadow-sm"
+                className="inline-flex items-center gap-2 px-4 py-2.5 rounded-xl border border-slate-300 text-slate-700 hover:border-orange-500 hover:text-orange-600 font-bold text-sm transition"
               >
                 <Phone className="w-4 h-4 text-orange-600" />
                 <span>Call Now</span>
               </a>
 
               <a
-                href="#quote"
-                className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-orange-600 hover:bg-orange-700 text-white font-extrabold text-sm transition-all shadow-md shadow-orange-600/25 hover:shadow-lg"
+                href="https://wa.me/919652030215?text=Hi%20General%20Packers%20%26%20Movers%2C%20I%20need%20a%20moving%20quote%20for%20Hyderabad."
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 px-4 py-2.5 rounded-xl bg-emerald-600 hover:bg-emerald-700 text-white font-bold text-sm shadow-md transition"
               >
-                <span>Get a Quote</span>
-                <span className="text-orange-200">&rarr;</span>
+                <MessageCircle className="w-4 h-4" />
+                <span>WhatsApp Quote</span>
               </a>
             </div>
 
-            {/* Mobile Menu Button */}
+            {/* Mobile Hamburger Button */}
             <div className="lg:hidden flex items-center gap-2">
               <a
                 href="tel:+919652030215"
-                className="p-2.5 rounded-lg bg-orange-600 text-white sm:hidden"
-                aria-label="Call phone number"
+                className="p-2.5 rounded-xl bg-orange-600 text-white shadow-sm"
+                aria-label="Call General Packers"
               >
-                <Phone className="w-5 h-5" />
+                <Phone className="w-4 h-4" />
               </a>
-
               <button
                 onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-                className="p-2.5 rounded-lg text-slate-700 hover:bg-slate-100 transition-colors"
-                aria-label="Toggle Navigation Menu"
+                className="p-2.5 rounded-xl border border-slate-300 text-slate-700 hover:bg-slate-100 transition"
+                aria-label="Toggle Menu"
               >
-                {mobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+                {mobileMenuOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
               </button>
             </div>
           </div>
@@ -174,19 +176,17 @@ export const Navbar: React.FC = () => {
             <div className="pt-3 border-t border-slate-100 space-y-2">
               <a
                 href="tel:+919652030215"
-                className="w-full flex items-center justify-center gap-2 py-3 bg-[#17324d] text-white font-bold rounded-xl text-center"
+                className="w-full py-3 bg-orange-600 text-white font-bold rounded-xl flex items-center justify-center gap-2"
               >
-                <Phone className="w-4 h-4 text-orange-400" />
-                Call +91 96520 30215
+                <Phone className="w-4 h-4" /> Call +91 96520 30215
               </a>
               <a
-                href="https://wa.me/919652030215?text=Hi%20General%20Packers%20%26%20Movers%2C%20I%20want%20a%20quote%20for%20Hyderabad%20shifting."
+                href="https://wa.me/919652030215?text=Hi%20General%20Packers%20%26%20Movers%2C%20I%20need%20a%20moving%20quote."
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-full flex items-center justify-center gap-2 py-3 bg-emerald-600 text-white font-bold rounded-xl text-center"
+                className="w-full py-3 bg-emerald-600 text-white font-bold rounded-xl flex items-center justify-center gap-2"
               >
-                <MessageCircle className="w-4 h-4" />
-                WhatsApp Us
+                <MessageCircle className="w-4 h-4" /> Chat on WhatsApp
               </a>
             </div>
           </div>
