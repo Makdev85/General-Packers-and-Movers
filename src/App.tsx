@@ -17,7 +17,7 @@ import { FooterAndFloatingCTA } from './components/FooterAndFloatingCTA';
 export default function App() {
   return (
     <div className="min-h-screen bg-slate-50 flex flex-col font-sans">
-      {/* Top Header & Sticky Navigation */}
+      {/* Top Header & Sticky Navigation with Official Logo */}
       <Navbar />
 
       <main className="flex-1">
@@ -27,7 +27,7 @@ export default function App() {
         {/* Core Services Section */}
         <ServicesSection />
 
-        {/* Fleet Showcase: Tata Ace, Eicher, Ashok Leyland as required */}
+        {/* Fleet Showcase: Tata Ace, Eicher, Ashok Leyland */}
         <FleetSection />
 
         {/* Interactive Quote Calculator & WhatsApp Link Generator */}
